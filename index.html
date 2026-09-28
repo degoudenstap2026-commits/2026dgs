@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nova Pro Builder</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="app">
+<aside class="left">
+  <div class="brand"><b>N</b><span>Nova<small>PRO BUILDER</small></span></div>
+  <div class="tabs"><button class="active" data-tab="pages">Pages</button><button data-tab="blocks">Blocks</button><button data-tab="assets">Assets</button></div>
+  <section id="pages" class="panel"><div class="heading">Pages <button id="addPage">＋</button></div><div id="pagesList"></div></section>
+  <section id="blocks" class="panel hidden"><div class="heading">Blocks</div><p class="muted">Klik of sleep een blok naar je canvas.</p><div class="blocks">
+    <button data-block="hero">✦ <b>Hero</b><small>Introsectie</small></button>
+    <button data-block="text">T <b>Tekst</b><small>Content</small></button>
+    <button data-block="cards">▦ <b>Cards</b><small>3 kaarten</small></button>
+    <button data-block="image">▣ <b>Image</b><small>Afbeelding</small></button>
+    <button data-block="cta">↗ <b>CTA</b><small>Actie</small></button>
+    <button data-block="contact">✉ <b>Contact</b><small>Contact</small></button>
+  </div></section>
+  <section id="assets" class="panel hidden"><div class="heading">Assets <button id="uploadAsset">＋</button></div><button id="assetButton" class="upload">Upload afbeelding</button><div id="assetGrid"></div></section>
+  <div class="leftBottom"><button id="settings">⚙ Website instellingen</button><button id="save" class="save">✓ Opslaan</button></div>
+</aside>
+
+<main class="editor">
+<header class="top"><div class="crumb">Website <i>/</i> <b id="pageName">Home</b></div>
+<div class="devices"><button id="undo">↶</button><button id="redo">↷</button><span></span><button id="desktop" class="active">Desktop</button><button id="tablet">Tablet</button><button id="mobile">Mobile</button></div>
+<div class="actions"><em id="status">Opgeslagen</em><button id="preview">Preview</button><button id="publish">Publiceren</button></div></header>
+<div class="canvasWrap"><div id="canvas" class="canvas"></div></div>
+</main>
+
+<aside class="right">
+<div class="rightTabs"><button class="active" data-right="designBox">Design</button><button data-right="contentBox">Content</button></div>
+<div id="designBox" class="inspector"><div class="empty">Selecteer een sectie of element.</div></div>
+<div id="contentBox" class="inspector hidden"><div class="empty">Selecteer tekst of een afbeelding.</div></div>
+</aside>
+</div>
+<div id="modal" class="modal hidden"><div class="modalCard"><div class="modalHead"><b id="modalTitle"></b><button id="closeModal">×</button></div><div id="modalBody"></div></div></div>
+<div id="toast"></div><input id="file" type="file" accept="image/*" hidden>
+<script src="script.js"></script></body></html>
